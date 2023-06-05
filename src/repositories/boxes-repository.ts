@@ -113,6 +113,36 @@ const boxes: boxType[] = [
 		volumetricWeight: '',
 		fixedValues: false
 	},
+	{
+		id: "A",
+		peatSize: 'пустой',
+		volumetricWeight: '',
+		fixedValues: false
+	},
+	{
+		id: "B",
+		peatSize: 'пустой',
+		volumetricWeight: '',
+		fixedValues: false
+	},
+	{
+		id: "C",
+		peatSize: 'пустой',
+		volumetricWeight: '',
+		fixedValues: false
+	},
+	{
+		id: "D",
+		peatSize: 'пустой',
+		volumetricWeight: '',
+		fixedValues: false
+	},
+	{
+		id: "K",
+		peatSize: 'пустой',
+		volumetricWeight: '',
+		fixedValues: false
+	},
 ]
 
 export const boxesRepository = {
