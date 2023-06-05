@@ -4,7 +4,7 @@ import {boxesRepository} from "../repositories/boxes-repository";
 export const boxesRouter = Router({})
 
 
-boxesRouter.get('/', (req: Request, res: Response) => {
+boxesRouter.get('/boxes', (req: Request, res: Response) => {
 	const boxes = boxesRepository.getBoxes()
 	if (boxes) {
 		res.send(boxes)
