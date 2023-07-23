@@ -10,7 +10,7 @@ boxesRouter.get('/boxes', (req: Request, res: Response) => {
 		res.send(boxes)
 		res.send(200)
 	} else {
-		res.send(400)
+		res.status(400).send("Не возможно загрузить информацию")
 	}
 })
 boxesRouter.put('/:boxId', (req: Request, res: Response) => {
