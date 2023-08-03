@@ -15,7 +15,6 @@ let boxes: boxType[]
 fs.readFile(filePath, (err: NodeJS.ErrnoException | null, data: Buffer) => {
 	if (err) throw err;
 	boxes = JSON.parse(data.toString());
-	console.log(boxes);
 });
 
 export const boxesRepository = {

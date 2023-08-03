@@ -5,13 +5,13 @@ const cookieParser = require('cookie-parser')
 export const authRouter = Router({})
 
 const app = express();
-app.use(cookieParser());
+// app.use(cookieParser());
 
-authRouter.get('/user', (req: Request, res: Response) => {
+authRouter.put('/user', (req: Request, res: Response) => {
 	const authUser = authRepository.authUser(req.body)
 	if (authUser) {
 		res.send(authUser)
-		res.cookie('accessToken', 'some_access_token', {maxAge: 900000, httpOnly: true});
+		// res.cookie('accessToken', 'some_access_token', {maxAge: 900000, httpOnly: true});
 		res.send(200)
 	} else {
 		res.status(400).send('User is not authorized.');
