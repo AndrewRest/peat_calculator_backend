@@ -30,7 +30,7 @@ npm manifest:
   {
     "name": "peat_calculator_backend",
     "version": "1.0.0",
-    "main": "index.ts",
+    "main": "types.ts",
     "license": "MIT",
     "dependencies": {
       "@types/node": "^20.1.3",

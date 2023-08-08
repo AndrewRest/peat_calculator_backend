@@ -1,6 +1,6 @@
 import express from 'express'
 import bodyParser from "body-parser"
-import {boxesRouter} from "./routes/boxes-router"
+import {boxesRouter} from "./routes/boxes-router";
 import {authRouter} from "./routes/auth-router";
 
 const cors = require("cors")
@@ -12,7 +12,8 @@ const port = process.env.PORT || 3009
 const parserMiddleware = bodyParser({})
 app.use(parserMiddleware)
 
-app.use('/', boxesRouter)
+
+app.use('/boxes', boxesRouter)
 app.use('/auth', authRouter)
 
 app.listen(port, () => {
