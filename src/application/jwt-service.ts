@@ -8,7 +8,7 @@ export const settings = {
 
 export const jwtService = {
 	async createJWT(user: userType) {
-		return jwt.sign({ user: user.user }, settings.JWT_SECRET, {expiresIn: '5m'})
+		return jwt.sign({ user: user.user }, settings.JWT_SECRET, {expiresIn: '8h'})
 	},
 	verifyToken(token: string): any | null {
 		try {
