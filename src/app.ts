@@ -1,8 +1,8 @@
-import express from 'express'
 import bodyParser from "body-parser"
 import {boxesRouter} from "./routes/boxes-router";
 import {authRouter} from "./routes/auth-router";
 
+const express = require("express");
 const cors = require("cors")
 
 const app = express()
