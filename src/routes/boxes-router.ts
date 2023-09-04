@@ -2,10 +2,17 @@ import {Request, Response, Router} from "express";
 import {boxesRepository} from "../repositories/boxes-repository";
 import {authMiddleware} from "../middlewares/auth-middleware";
 
+declare global {
+	namespace Express {
+		interface Request {
+			user: string
+		}
+	}
+}
 export const boxesRouter = Router({})
 
 boxesRouter.get('/', authMiddleware, (req: Request, res: Response) => {
-	const user = req["user"]
+	const user = req.user
 	const boxes = boxesRepository.getBoxes()
 	if (boxes) {
 		res.status(200).send({boxes, user})
