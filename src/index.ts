@@ -1,9 +1,9 @@
-import bodyParser from "body-parser"
+const bodyParser = require("body-parser")
+const express = require("express");
+const cors = require("cors")
 import {boxesRouter} from "./routes/boxes-router";
 import {authRouter} from "./routes/auth-router";
 
-const express = require("express");
-const cors = require("cors")
 
 const app = express()
 app.use(cors())
