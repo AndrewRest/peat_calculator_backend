@@ -1,8 +1,10 @@
 const bodyParser = require("body-parser")
 const express = require("express");
 const cors = require("cors")
-import {boxesRouter} from "./routes/boxes-router";
-import {authRouter} from "./routes/auth-router";
+const {boxesRouter} = require("./routes/boxes-router");
+const {authRouter} = require("./routes/auth-router");
+// import {boxesRouter} from "./routes/boxes-router";
+// import {authRouter} from "./routes/auth-router";
 
 
 const app = express()
